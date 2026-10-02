@@ -1,0 +1,6 @@
+{
+  "name": "Prove",
+  "description": "Public ledger where users lock their promises permanently on the internet. Talk is cheap. Prove it here.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

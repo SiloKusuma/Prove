@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prove — Talk is cheap. Prove it here.</title>
+    <meta name="description" content="Lock your promises permanently on a public ledger. Talk is cheap. Prove it here." />
+    <meta property="og:title" content="Prove — Talk is cheap. Prove it here." />
+    <meta property="og:description" content="Lock your vows cryptographically. Eternal and un-editable public ledger." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      // Global terminal-security script: disable contextmenu and inspect shortcuts
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        window.dispatchEvent(new CustomEvent('prove:security-toast', { detail: { message: 'Security Protocol: Context inspection disabled' } }));
+        return false;
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (
+          e.keyCode === 123 ||
+          (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+          (e.metaKey && e.altKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+          (e.ctrlKey && (e.key === 'u' || e.key === 'U'))
+        ) {
+          e.preventDefault();
+          window.dispatchEvent(new CustomEvent('prove:security-toast', { detail: { message: 'Ledger Guard: Developer inspection blocked' } }));
+          return false;
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-[#0A0A0A] text-[#FAFAFA] selection:bg-neutral-800 selection:text-white antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
